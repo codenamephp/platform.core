@@ -1,0 +1,42 @@
+{
+  "name": "codename-php/platform.core",
+  "description": "The CodenamePHP Platform core that contains basic interfaces, exceptions etc..",
+  "version": "0.1",
+  "authors": [
+    {
+      "name": "Bastian Schwarz",
+      "email": "bastian@codename-php.de"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.zendframework.com/"
+    }
+  ],
+  "require": {
+    "zendframework/zend-http": "2.*"
+  },
+  "require-dev": {
+    "phing/phing": "2.8.*",
+    "ptrofimov/xpmock": "*",
+    "phploc/phploc": "*",
+    "pdepend/pdepend": "1.0.7",
+    "phpmd/phpmd": "*",
+    "sebastian/phpcpd": "*",
+    "phpdocumentor/phpdocumentor": "*",
+    "phpunit/phpunit": "*",
+    "mikey179/vfsStream": "v1.3.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "de\\codenamephp\\": "src/main/php"
+    }
+  },
+  "autoload-dev": {
+    "psr-0": {
+      "de\\codenamephp\\": "src/test/php",
+      "": "vendor/pdepend/pdepend/src/main/php"
+    }
+  }
+}
