@@ -15,7 +15,7 @@ namespace de\codenamephp\platform\core\file\property;
  *
  * @author Bastian Schwarz <bastian@codename-php.de>
  */
-class File {
+class Entries {
 
   /**
    * The entries of the file. The entry's key is set as array key so only unique keys are allowed

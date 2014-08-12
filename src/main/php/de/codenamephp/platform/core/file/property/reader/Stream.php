@@ -30,10 +30,10 @@ class Stream implements iReader {
   /**
    * Reads the given file via stream and sets the properties as de\codenamephp\platform\core\file\property\Entry[] to the file de\codenamephp\platform\core\file\property\File
    * @param \SplFileObject $file
-   * @return \de\codenamephp\platform\core\file\property\File The loaded property file
+   * @return \de\codenamephp\platform\core\file\property\Entries The loaded property file
    */
   public function read(\SplFileObject $file) {
-    $propertyFile = new \de\codenamephp\platform\core\file\property\File();
+    $propertyFile = new \de\codenamephp\platform\core\file\property\Entries();
     foreach($file as $line) {
       $keyValue = explode('=', $line);
       $propertyFile->addEntry(new \de\codenamephp\platform\core\file\property\Entry(trim($keyValue[0]), trim($keyValue[1])));

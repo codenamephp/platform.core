@@ -26,7 +26,7 @@ namespace de\codenamephp\platform\core\file\property\writer;
  */
 class Stream implements iWriter {
 
-  public function write(\SplFileObject $file, \de\codenamephp\platform\core\file\property\File $propertyFile) {
+  public function write(\SplFileObject $file, \de\codenamephp\platform\core\file\property\Entries $propertyFile) {
     foreach($propertyFile->getEntries() as $entry) {
       $file->fwrite(sprintf('%s=%s' . PHP_EOL, $entry->getKey(), $entry->getValue()));
     }

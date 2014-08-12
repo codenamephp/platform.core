@@ -30,8 +30,8 @@ interface iWriter {
    * Writes the given property file into the given file
    * 
    * @param \SplFileObject $file The file to write the properties to
-   * @param \de\codenamephp\platform\core\file\property\File $propertyFile The property file containing the entries to write
+   * @param \de\codenamephp\platform\core\file\property\Entries $propertyFile The property file containing the entries to write
    * @return self fluent interface
    */
-  public function write(\SplFileObject $file, \de\codenamephp\platform\core\file\property\File $propertyFile);
+  public function write(\SplFileObject $file, \de\codenamephp\platform\core\file\property\Entries $propertyFile);
 }

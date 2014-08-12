@@ -30,7 +30,7 @@ interface iReader {
    * Reads and loads a properties file
    *
    * @param \SplFileObject $file
-   * @return \de\codenamephp\platform\core\file\property\File The loaded property file
+   * @return \de\codenamephp\platform\core\file\property\Entries The loaded property file
    */
   public function read(\SplFileObject $file);
 }

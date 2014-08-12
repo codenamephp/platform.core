@@ -20,7 +20,7 @@
 namespace de\codenamephp\platform\core\file\property\writer;
 
 use \de\codenamephp\platform\core\file\property\Entry;
-use \de\codenamephp\platform\core\file\property\File;
+use \de\codenamephp\platform\core\file\property\Entries;
 use \de\codenamephp\platform\core\TestCase;
 use \org\bovigo\vfs\vfsStream;
 
@@ -50,7 +50,7 @@ class StreamTest extends TestCase {
             ->fwrite(['prop3=value3' . PHP_EOL], self::at(2))
             ->new(vfsStream::url('root/somefile'), 'w');
 
-    $propertyFile = new File();
+    $propertyFile = new Entries();
     $propertyFile
             ->addEntry(new Entry('prop1', 'value1'))
             ->addEntry(new Entry('prop2', 'value2'))
@@ -60,6 +60,6 @@ class StreamTest extends TestCase {
   }
 
   public function testwrite_canReturnSelf() {
-    self::assertSame($this->sut, $this->sut->write($this->mock('\SplFileObject')->new(vfsStream::url('root/somefile'), 'w'), new File()));
+    self::assertSame($this->sut, $this->sut->write($this->mock('\SplFileObject')->new(vfsStream::url('root/somefile'), 'w'), new Entries()));
   }
 }

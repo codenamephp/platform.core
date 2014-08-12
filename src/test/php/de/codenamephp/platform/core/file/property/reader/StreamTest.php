@@ -47,7 +47,7 @@ class StreamTest extends TestCase {
   public function testread_CanReturnFile() {
     vfsStream::create(array('testfile.properties' => ''));
 
-    self::assertInstanceOf('\de\codenamephp\platform\core\file\property\File', $this->sut->read(new SplFileObject(vfsStream::url('root/testfile.properties'))));
+    self::assertInstanceOf('\de\codenamephp\platform\core\file\property\Entries', $this->sut->read(new SplFileObject(vfsStream::url('root/testfile.properties'))));
   }
 
   public function testread_CanReadPropertiesFromFile() {
