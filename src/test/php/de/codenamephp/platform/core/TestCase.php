@@ -23,6 +23,6 @@ namespace de\codenamephp\platform\core;
  *
  * @author Bastian Schwarz <bastian@codename-php.de>
  */
-class TestCase extends \Xpmock\TestCase {
+class TestCase extends \de\codenamephp\platform\test\TestCase {
 //put your code here
 }

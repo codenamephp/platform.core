@@ -15,15 +15,13 @@
     "php": ">=5.3.0"
   },
   "require-dev": {
+    "codenamephp/platform.test": "1.0.*",
     "phing/phing": "2.8.*",
-    "ptrofimov/xpmock": "*",
     "phploc/phploc": "*",
     "pdepend/pdepend": "1.0.7",
     "phpmd/phpmd": "*",
     "sebastian/phpcpd": "*",
-    "phpdocumentor/phpdocumentor": "*",
-    "phpunit/phpunit": "*",
-    "mikey179/vfsStream": "v1.3.0"
+    "phpdocumentor/phpdocumentor": "*"
   },
   "autoload": {
     "classmap": ["src/main/php"]
