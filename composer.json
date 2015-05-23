@@ -1,7 +1,7 @@
 {
   "name": "codenamephp/platform.core",
   "description": "The CodenamePHP Platform core that contains basic interfaces, exceptions etc..",
-  "type": "imxLibrary",
+  "type": "infomax",
   "keywords": ["library", "exceptions"],
   "homepage": "https://github.com/codenamephp/platform.core",
   "license": "Apache-2.0",
