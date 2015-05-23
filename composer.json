@@ -38,7 +38,8 @@
   },
   "extra": {
     "imx.Installer": {
-      "installPath": "portal/imxLibrary/imxLibraryCore"
+      "installPath": "portal/imxLibrary/imxLibraryCore",
+      "sourceFolder": "src/main/php"
     }
   }
 }
