@@ -35,5 +35,10 @@
   },
   "archive": {
     "exclude": ["/src/test"]
+  },
+  "extra": {
+    "imx.Installer": {
+      "installPath": "portal/imxLibrary/imxLibraryCore"
+    }
   }
 }
