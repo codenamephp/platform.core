@@ -1,7 +1,6 @@
 {
   "name": "codenamephp/platform.core",
   "description": "The CodenamePHP Platform core that contains basic interfaces, exceptions etc..",
-  "type": "infomax",
   "keywords": ["library", "exceptions"],
   "homepage": "https://github.com/codenamephp/platform.core",
   "license": "Apache-2.0",
@@ -12,8 +11,7 @@
     }
   ],
   "require": {
-    "php": ">=5.3.0",
-    "infomax/installer": "dev-master"
+    "php": ">=5.3.0"
   },
   "require-dev": {
     "codenamephp/platform.test": "1.0.*",
