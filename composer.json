@@ -11,33 +11,22 @@
     }
   ],
   "require": {
-    "php": ">=5.3.0"
+    "php": "^7.0"
   },
   "require-dev": {
-    "codenamephp/platform.test": "1.0.*",
-    "phing/phing": "2.8.*",
-    "phploc/phploc": "*",
-    "pdepend/pdepend": "1.0.7",
-    "phpmd/phpmd": "*",
-    "sebastian/phpcpd": "*",
-    "phpdocumentor/phpdocumentor": "*"
+    "codenamephp/platform.test": "^2"
   },
   "autoload": {
-    "classmap": ["src/main/php"]
+    "psr-0": {
+      "de\\codenamephp\\": ["src/main/php"]
+    }
   },
   "autoload-dev": {
     "psr-0": {
-      "de\\codenamephp\\": ["src/main/php", "src/test/php"],
-      "": "vendor/pdepend/pdepend/src/main/php"
+      "de\\codenamephp\\": ["src/test/php"]
     }
   },
   "archive": {
     "exclude": ["/src/test"]
-  },
-  "extra": {
-    "imx.Installer": {
-      "installPath": "portal/imxLibrary/imxLibraryCore",
-      "sourceFolder": "src/main/php"
-    }
   }
 }

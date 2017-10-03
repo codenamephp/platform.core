@@ -19,10 +19,10 @@
  */
 namespace de\codenamephp\platform\core\file\property\writer;
 
-use \de\codenamephp\platform\core\file\property\Entry;
-use \de\codenamephp\platform\core\file\property\Entries;
-use \de\codenamephp\platform\core\TestCase;
-use \org\bovigo\vfs\vfsStream;
+use de\codenamephp\platform\core\file\property\Entries;
+use de\codenamephp\platform\core\file\property\Entry;
+use de\codenamephp\platform\core\TestCase;
+use org\bovigo\vfs\vfsStream;
 
 /**
  *
@@ -45,10 +45,11 @@ class StreamTest extends TestCase {
   }
 
   public function testwrite_CanWriteLineToFile_ForEachEntry() {
-    $file = $this->mock('\SplFileObject')->fwrite(['prop1=value1' . PHP_EOL], self::at(0))
-            ->fwrite(['prop2=value2' . PHP_EOL], self::at(1))
-            ->fwrite(['prop3=value3' . PHP_EOL], self::at(2))
-            ->new(vfsStream::url('root/somefile'), 'w');
+    $file = $this->getMockBuilder(\SplFileObject::class)->setConstructorArgs([vfsStream::url('root/somefile'), 'w'])->getMock();
+    $file
+      ->expects(self::exactly(3))
+      ->method('fwrite')
+      ->withConsecutive(['prop1=value1' . PHP_EOL], ['prop2=value2' . PHP_EOL], ['prop3=value3' . PHP_EOL]);
 
     $propertyFile = new Entries();
     $propertyFile
@@ -60,6 +61,6 @@ class StreamTest extends TestCase {
   }
 
   public function testwrite_canReturnSelf() {
-    self::assertSame($this->sut, $this->sut->write($this->mock('\SplFileObject')->new(vfsStream::url('root/somefile'), 'w'), new Entries()));
+    self::assertSame($this->sut, $this->sut->write($this->getMockBuilder(\SplFileObject::class)->setConstructorArgs([vfsStream::url('root/somefile'), 'w'])->getMock(), new Entries()));
   }
 }
