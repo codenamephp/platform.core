@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Docker Deployment" type="docker-deploy" factoryName="Docker Deployment" singleton="true" server-name="Docker">
+  <configuration default="false" name="Docker App" type="docker-deploy" factoryName="Docker Deployment" singleton="true" server-name="Docker">
     <deployment type="docker-compose.yml" path="$PROJECT_DIR$/docker-compose.yml">
       <settings>
         <option name="JSONFilePath" value="" />
