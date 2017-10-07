@@ -11,10 +11,11 @@
     }
   ],
   "require": {
-    "php": "^7.0"
+    "php": "^7.1"
   },
   "require-dev": {
-    "codenamephp/platform.test": "^2"
+    "phpunit/phpunit": "^6",
+    "mikey179/vfsStream": "^1.6"
   },
   "autoload": {
     "psr-0": {
